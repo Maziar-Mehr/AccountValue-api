@@ -29,7 +29,9 @@ The API will be available at `https://account-value-api.onrender.com/predict`.
 ### 3. Example API Call
 
 ```sh
-curl -X POST "http://localhost:8000/predict" -H "Content-Type: application/json" -d '{
+curl -X POST "https://accountvalue-api.onrender.com/predict" \
+-H "Content-Type: application/json" \
+-d '{
   "year_established": 2005,
   "total_payroll": 500000,
   "num_employees": 25,
