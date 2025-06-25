@@ -29,21 +29,18 @@ The API will be available at `https://account-value-api.onrender.com/predict`.
 ### 3. Example API Call
 
 ```sh
-curl -X POST https://account-value-api.onrender.com/predict \
-  -H "Content-Type: application/json" \
-  -d '{
-    "account_uuid": "b02a677c-25e7-4dbf-b52d-13063fc0dfa3",
-    "product": ["Business_Owners_Policy_BOP"],
-    "state": "KS",
-    "industry": "Coin-Operated Laundries and Drycleaners",
-    "subindustry": "Coin-Operated Laundries and Drycleaners",
-    "business_structure": "Corporation",
-    "year_established": 2018,
-    "annual_revenue": 100000,
-    "total_payroll": 22000,
-    "num_employees": 3,
-    "avg_premium": 507
-  }'
+curl -X POST "http://localhost:8000/predict" -H "Content-Type: application/json" -d '{
+  "year_established": 2005,
+  "total_payroll": 500000,
+  "num_employees": 25,
+  "annual_revenue": 1200000,
+  "state": "California",
+  "industry": "Retail",
+  "subindustry": "Clothing Stores",
+  "business_structure": "LLC",
+  "product_list": ["General Liability", "Workers Compensation"],
+  "avg_premium": 3500
+}'
 ```
 
 ### 4. Project Structure
